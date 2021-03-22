@@ -48,11 +48,13 @@ def lines(x, y, length, angle, color):
     for i in range(q):
         turtle.down()
         turtle.forward(length)
+
         # Получить координаты для следующей линии
         a = turtle.xcor() + 4
         b = turtle.ycor()
         turtle.right(180)
         turtle.penup()
+
         # Позиция черепахи для следующей линии
         turtle.goto(a, b)
         turtle.pendown()
@@ -97,7 +99,6 @@ def rectangle(x, y, width, length, angle, color):
     :param angle: the mounting angle of a rectangle
     :param color: color of a rectangle frame and fill
     :return: None
-    ToDo: Seledtsov
     '''
     turtle.home()
     turtle.up()
@@ -157,6 +158,7 @@ def rapport(x, y, side):
     square(x, y, side, 0, '#4ab19c')
     lines(x+5, y-2.5, side-5, 90, '#de584d')
     romb(x+(side/2), y-5, math.sqrt(((side/2)**2)*2) - 5, 45, '#2a6779')
+
     #начертить 4-конечную звезду
     turtle.up()
     turtle.goto(x+5, y-5)
@@ -174,6 +176,7 @@ def rapport(x, y, side):
     turtle.goto(x+(side/4), y-(side/2))
     turtle.goto(x+5, y-5)
     turtle.end_fill()
+
     #начертить диагонали звезды
     turtle.up()
     turtle.goto(x+(side/4), y-(side/2))
@@ -188,6 +191,7 @@ def rapport(x, y, side):
     romb(x+(0.375*side), y-(side*0.375), side/4, 0, '#de584d')
     triangle90(x+(0.375*side), y-(side*0.375), math.sqrt(((side/8)**2)*2), 45, '#fb9728')
     triangle90(x+(side*0.625), y-(side*0.625), math.sqrt(((side/8)**2)*2), 225, '#fb9728')
+
     #Начертить диагонали квадрата
     turtle.goto(x, y)
     turtle.pensize(3)
@@ -198,6 +202,7 @@ def rapport(x, y, side):
     turtle.goto(x+side, y)
     turtle.down()
     turtle.goto(x, y-side)
+
     #Начертить границы центрального ромба
     turtle.up()
     turtle.goto(x+(0.375*side), y-(side*0.375))
